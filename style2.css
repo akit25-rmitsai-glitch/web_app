@@ -1,3 +1,16 @@
+header {
+    text-align: center;
+    padding: 20px;
+    background: white;
+    border-bottom: 1px solid black;
+}
+
+nav a {
+    margin: 10px;
+    text-decoration: none;
+    color: black;
+}
+
 body {
     margin: 0;
     padding: 0;
