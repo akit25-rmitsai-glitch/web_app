@@ -1,0 +1,64 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(images/cosmos.jpg);
+    background-size: cover;
+}
+
+/* Земля */
+#earth {
+    position: relative;
+    padding: 100px;
+    z-index: 1;
+}
+
+/* Місяць */
+#moon {
+    position: absolute;
+    top: 250px;
+    left: 250px;
+    width: 110px;
+    z-index: 0;
+
+    animation: orbit 5s linear infinite;
+}
+
+/* Анімація */
+@keyframes orbit {
+
+    0% {
+        top: 250px;
+        left: 250px;
+        width: 110px;
+        z-index: 0;
+    }
+
+    25% {
+        top: 150px;
+        left: 550px;
+        width: 125px;
+        z-index: 2;
+    }
+
+    50% {
+        top: 280px;
+        left: 280px;
+        width: 140px;
+        z-index: 2;
+    }
+
+    75% {
+        top: 500px;
+        left: 20px;
+        width: 125px;
+        z-index: 0;
+    }
+
+    100% {
+        top: 250px;
+        left: 250px;
+        width: 110px;
+        transform: rotate(360deg);
+        z-index: 0;
+    }
+}
