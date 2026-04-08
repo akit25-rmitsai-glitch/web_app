@@ -5,14 +5,12 @@ body {
     background-size: cover;
 }
 
-/* Земля */
 #earth {
     position: relative;
     padding: 100px;
     z-index: 1;
 }
 
-/* Місяць */
 #moon {
     position: absolute;
     top: 250px;
@@ -20,11 +18,10 @@ body {
     width: 110px;
     z-index: 0;
 
-    animation: orbit 5s linear infinite;
+    animation: orbita 5s linear infinite;
 }
 
-/* Анімація */
-@keyframes orbit {
+@keyframes orbita {
 
     0% {
         top: 250px;
