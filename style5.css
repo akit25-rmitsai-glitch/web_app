@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #f2f2f2;
+    background: #efefef;
     color: #111;
 }
 
@@ -12,102 +12,84 @@ body {
 .game-wrapper {
     max-width: 900px;
     margin: 0 auto;
-    background: #ffffff;
-    border: 1px solid #cfcfcf;
-    padding: 30px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    text-align: center;
 }
 
 .game-wrapper h2 {
     margin-top: 0;
-    margin-bottom: 25px;
-    text-align: center;
-}
-
-.info-panel {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    justify-content: center;
     margin-bottom: 20px;
+    font-size: 34px;
 }
 
-.info-box {
-    min-width: 170px;
-    padding: 12px 16px;
-    border: 1px solid #bdbdbd;
-    background: #fafafa;
-    text-align: center;
-    font-weight: 700;
+.status {
+    margin-bottom: 30px;
+    font-size: 24px;
 }
 
-#message {
-    text-align: center;
-    margin-bottom: 25px;
-    font-size: 16px;
-}
-
-#game {
-    display: flex;
+.board {
+    width: 420px;
+    margin: 0 auto 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 120px);
+    gap: 30px;
     justify-content: center;
-    margin-bottom: 25px;
 }
 
-.field {
-    border-collapse: separate;
-    border-spacing: 4px;
+.cell {
+    width: 120px;
+    height: 120px;
+    background: #dcdcdc;
+    border: 2px solid #c8c8c8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #000;
+    font-size: 72px;
+    font-weight: 400;
+    box-sizing: border-box;
 }
 
-#game td {
-    width: 60px;
-    height: 60px;
-    border: 1px solid #555;
-    background: #ffffff;
-    text-align: center;
-    vertical-align: middle;
-    cursor: pointer;
-    user-select: none;
-    transition: background 0.2s ease, transform 0.2s ease;
-    font-weight: 700;
+a.cell:hover {
+    background: #d3d3d3;
 }
 
-#game td:hover {
-    background: #f0f0f0;
-    transform: scale(1.03);
+.restart-block {
+    margin-top: 10px;
 }
 
-.active {
-    background-color: lightgreen !important;
+.restart-link {
+    font-size: 64px;
+    color: #5a2ca0;
+    text-decoration: underline;
 }
 
-.buttons {
-    text-align: center;
-}
-
-#restart-btn {
-    padding: 10px 18px;
-    border: 1px solid #555;
-    background: #efefef;
-    cursor: pointer;
-    font-size: 15px;
-}
-
-#restart-btn:hover {
-    background: #e2e2e2;
+.restart-link:hover {
+    color: #4a2387;
 }
 
 @media (max-width: 768px) {
-    #game td {
-        width: 46px;
-        height: 46px;
-        font-size: 16px !important;
+    .board {
+        width: 300px;
+        grid-template-columns: repeat(3, 80px);
+        gap: 20px;
     }
 
-    .game-wrapper {
-        padding: 20px 15px;
+    .cell {
+        width: 80px;
+        height: 80px;
+        font-size: 48px;
     }
 
-    .info-box {
-        min-width: 140px;
+    .restart-link {
+        font-size: 40px;
+    }
+
+    .status {
+        font-size: 20px;
+    }
+
+    .game-wrapper h2 {
+        font-size: 28px;
     }
 }

@@ -1,175 +1,27 @@
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #efefef;
-    color: #111;
-}
+Постановка задачі
 
-.page-header {
-    background: #ffffff;
-    border-bottom: 1px solid #cfcfcf;
-    padding: 25px 20px;
-}
+Необхідно розробити односторінковий веб-застосунок для резервування кімнат у готелі. Основною сторінкою застосунку буде index.php, а взаємодія між клієнтською та серверною частинами надалі повинна відбуватися з використанням AJAX.
 
-.page-header-box {
-    max-width: 1100px;
-    margin: 0 auto;
-}
+Фронтенд частина застосунку має бути реалізована засобами HTML5, CSS3 та JavaScript. Для прискорення розробки інтерфейсу планувальника доцільно використати бібліотеку DayPilot Scheduler, а для спрощення роботи зі сценаріями та AJAX-запитами — бібліотеку jQuery.
 
-#logo {
-    margin: 0 0 10px;
-    font-size: 30px;
-}
+Бекенд частина застосунку повинна бути реалізована мовою PHP. Для зберігання даних необхідно використати СУБД MySQL та організувати доступ до даних через PDO.
 
-#claim {
-    margin: 0;
-    color: #444;
-    font-size: 16px;
-}
+У системі потрібно передбачити:
 
-.main-layout {
-    max-width: 1100px;
-    margin: 30px auto;
-    padding: 0 20px;
-    display: flex;
-    gap: 30px;
-    align-items: flex-start;
-}
+відображення переліку кімнат готелю;
+відображення стану кімнат;
+фільтрацію кімнат за місткістю;
+відображення статусів бронювання;
+створення, редагування, видалення бронювань;
+зміну тривалості бронювання та перетягування блоку бронювання;
+контроль недопущення накладання бронювань.
 
-.sidebar {
-    width: 260px;
-    background: #ffffff;
-    border: 1px solid #cfcfcf;
-    padding: 20px;
-    box-sizing: border-box;
-}
+На даному етапі розробки необхідно створити структуру бази даних, таблиці rooms і reservations, наповнити їх тестовими даними та підготувати базовий файл головної сторінки застосунку.
 
-.sidebar h2 {
-    margin-top: 0;
-    font-size: 24px;
-}
+Висновок
 
-.filter-box,
-.status-box {
-    margin-bottom: 25px;
-}
+У ході виконання лабораторної роботи було здійснено постановку задачі для розробки веб-застосунку резервування кімнат у готелі. Було визначено основні функціональні можливості майбутньої системи, а також розподілено ролі між використаними технологіями: HTML5 і CSS3 для створення інтерфейсу, JavaScript і jQuery для клієнтської логіки та AJAX-взаємодії, PHP для серверної частини, MySQL для зберігання даних.
 
-.filter-box label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
-}
+Також було створено базу даних, дві основні таблиці rooms і reservations, та виконано їх наповнення тестовими записами. Додатково підготовлено головний файл застосунку з базовою структурою сторінки та стилями, що створює основу для подальшої реалізації функціоналу бронювання.
 
-.filter-box select {
-    width: 100%;
-    padding: 8px;
-    font-size: 15px;
-}
-
-.status-box h3 {
-    margin: 0 0 10px;
-    font-size: 18px;
-}
-
-.status-box ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.status-box li {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 10px;
-}
-
-.mark {
-    display: inline-block;
-    width: 16px;
-    height: 16px;
-}
-
-.mark.ready {
-    background: #25b24a;
-}
-
-.mark.cleanup {
-    background: #f0b323;
-}
-
-.mark.dirty {
-    background: #d93025;
-}
-
-.line {
-    display: inline-block;
-    width: 28px;
-    height: 5px;
-}
-
-.line.new {
-    background: orange;
-}
-
-.line.confirmed {
-    background: green;
-}
-
-.line.arrived {
-    background: #1a73e8;
-}
-
-.line.checkedout {
-    background: #777;
-}
-
-.line.expired {
-    background: red;
-}
-
-.content {
-    flex: 1;
-}
-
-.content-box {
-    background: #ffffff;
-    border: 1px solid #cfcfcf;
-    padding: 20px;
-    margin-bottom: 25px;
-}
-
-.content-box h2 {
-    margin-top: 0;
-}
-
-#nav {
-    min-height: 320px;
-    border: 2px dashed #999;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background: #fafafa;
-    color: #555;
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-.page-footer {
-    margin-top: 40px;
-    padding: 20px;
-    background: #ffffff;
-    border-top: 1px solid #cfcfcf;
-    text-align: center;
-}
-
-@media (max-width: 900px) {
-    .main-layout {
-        flex-direction: column;
-    }
-
-    .sidebar {
-        width: 100%;
-    }
-}
+Отриманий результат є достатнім для переходу до наступних етапів розробки, проте на поточному етапі застосунок ще не реалізує повний функціонал взаємодії з базою даних та календарним планувальником, що буде предметом наступних лабораторних робіт.

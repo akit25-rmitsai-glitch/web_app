@@ -1,1 +1,51 @@
-This Repository have only labs for my teacher
+SQL для створення бази даних
+
+CREATE DATABASE IF NOT EXISTS hotel_reservation
+CHARACTER SET utf8mb4
+COLLATE utf8mb4_unicode_ci;
+
+USE hotel_reservation;
+
+
+
+SQL для створення таблиць
+
+CREATE TABLE IF NOT EXISTS rooms (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    name TEXT,
+    capacity INT,
+    status VARCHAR(30)
+);
+
+CREATE TABLE IF NOT EXISTS reservations (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    name TEXT,
+    start DATETIME,
+    end DATETIME,
+    room_id INT,
+    status VARCHAR(30),
+    paid INT,
+    FOREIGN KEY (room_id) REFERENCES rooms(id)
+);
+
+
+
+Тестові дані для таблиці rooms
+
+INSERT INTO rooms (name, capacity, status) VALUES
+('Room 1', 2, 'dirty'),
+('Room 2', 2, 'cleanup'),
+('Room 3', 2, 'ready'),
+('Room 4', 4, 'ready'),
+('Room 5', 1, 'ready');
+
+
+
+Тестові дані для таблиці reservations
+
+INSERT INTO reservations (name, start, end, room_id, status, paid) VALUES
+('Mrs. Garcia', '2017-01-04 00:00:00', '2017-01-12 00:00:00', 1, 'arrived', 0),
+('Mr. Jones', '2017-01-01 00:00:00', '2017-01-06 00:00:00', 2, 'checkedout', 100),
+('Mr. Schwartz', '2017-01-06 00:00:00', '2017-01-12 00:00:00', 2, 'confirmed', 50),
+('Mr. Gray', '2017-01-03 00:00:00', '2017-01-11 00:00:00', 3, 'expired', 0),
+('Mrs. Nguyen', '2017-01-09 00:00:00', '2017-01-15 00:00:00', 4, 'new', 0);

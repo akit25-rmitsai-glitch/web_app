@@ -1,51 +1,105 @@
-SQL для створення бази даних
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #eeeeee;
+    color: #111;
+}
 
-CREATE DATABASE IF NOT EXISTS hotel_reservation
-CHARACTER SET utf8mb4
-COLLATE utf8mb4_unicode_ci;
+.page {
+    padding: 40px 0;
+}
 
-USE hotel_reservation;
+.layout {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+}
 
+.content {
+    width: 100%;
+    max-width: 560px;
+}
 
+.content h2 {
+    margin: 0 0 25px;
+    font-size: 24px;
+}
 
-SQL для створення таблиць
+.post {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 28px;
+}
 
-CREATE TABLE IF NOT EXISTS rooms (
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    name TEXT,
-    capacity INT,
-    status VARCHAR(30)
-);
+.img {
+    width: 80px;
+    height: 80px;
+    border: 1px solid #9e9e9e;
+    background: #f8f8f8;
+    flex-shrink: 0;
+}
 
-CREATE TABLE IF NOT EXISTS reservations (
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    name TEXT,
-    start DATETIME,
-    end DATETIME,
-    room_id INT,
-    status VARCHAR(30),
-    paid INT,
-    FOREIGN KEY (room_id) REFERENCES rooms(id)
-);
+.post-text h3 {
+    margin: 0 0 10px;
+    font-size: 20px;
+}
 
+.post-text p {
+    margin: 0;
+    line-height: 1.5;
+    color: #333;
+}
 
+.sidebar {
+    width: 100%;
+    max-width: 260px;
+    border: 1px solid #9e9e9e;
+    background: #f6f6f6;
+    padding: 15px;
+    flex-shrink: 0;
+}
 
-Тестові дані для таблиці rooms
+.sidebar input,
+.sidebar button {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #bdbdbd;
+    margin-bottom: 10px;
+    font: inherit;
+}
 
-INSERT INTO rooms (name, capacity, status) VALUES
-('Room 1', 2, 'dirty'),
-('Room 2', 2, 'cleanup'),
-('Room 3', 2, 'ready'),
-('Room 4', 4, 'ready'),
-('Room 5', 1, 'ready');
+.sidebar button {
+    cursor: pointer;
+    background: #e9e9e9;
+}
 
+.sidebar h3 {
+    margin: 20px 0 10px;
+    font-size: 18px;
+}
 
+.sidebar ul {
+    margin: 0;
+    padding-left: 18px;
+}
 
-Тестові дані для таблиці reservations
+.site-footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #bdbdbd;
+    background: #ffffff;
+    margin-top: 40px;
+}
 
-INSERT INTO reservations (name, start, end, room_id, status, paid) VALUES
-('Mrs. Garcia', '2017-01-04 00:00:00', '2017-01-12 00:00:00', 1, 'arrived', 0),
-('Mr. Jones', '2017-01-01 00:00:00', '2017-01-06 00:00:00', 2, 'checkedout', 100),
-('Mr. Schwartz', '2017-01-06 00:00:00', '2017-01-12 00:00:00', 2, 'confirmed', 50),
-('Mr. Gray', '2017-01-03 00:00:00', '2017-01-11 00:00:00', 3, 'expired', 0),
-('Mrs. Nguyen', '2017-01-09 00:00:00', '2017-01-15 00:00:00', 4, 'new', 0);
+@media (max-width: 900px) {
+    .layout {
+        flex-direction: column;
+    }
+
+    .content,
+    .sidebar {
+        max-width: 100%;
+    }
+}
