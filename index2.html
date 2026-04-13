@@ -1,32 +1,92 @@
 <!DOCTYPE html>
-<html lang="uk">
-    
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Орбіта Місяця</title>
-    <link rel="stylesheet" href="style2.css">
-</head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 1</title>
 
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="style.css">
+</head>
 <body>
-<header class="header">
-<div class="container">
+
+<header class="site-header">
+    <div class="container">
+        <h1 class="site-title">BLOG</h1>
 
         <nav class="menu">
-            <a href="index.html">Lab 1</a>
+            <a href="index.html" class="active">Lab 1</a>
             <a href="index2.html">Lab 2</a>
             <a href="index3.html">Lab 3</a>
             <a href="index4.html">Lab 4</a>
-            <a href="index5.html">Lab 5</a>
-            <a href="index6.html">Lab 6</a>
+            <a href="index5.php">Lab 5</a>
+            <a href="index6.php">Lab 6</a>
             <a href="index7.html">Lab 7</a>
-            <a href="#">About</a>
-            <a href="#">Contact</a>
         </nav>
-
     </div>
 </header>
-<img src="images/earth.png" id="earth" alt="Планета Земля">
-<img src="images/moon.png" id="moon" alt="Місяць">
+
+<main class="page">
+    <div class="container layout">
+        <section class="content">
+            <h2>Latest Posts</h2>
+
+            <article class="post">
+                <div class="img"></div>
+                <div class="post-text">
+                    <h3>Article Title</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+                    </p>
+                </div>
+            </article>
+
+            <article class="post">
+                <div class="img"></div>
+                <div class="post-text">
+                    <h3>Article Title</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+                    </p>
+                </div>
+            </article>
+
+            <article class="post">
+                <div class="img"></div>
+                <div class="post-text">
+                    <h3>Article Title</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+                    </p>
+                </div>
+            </article>
+        </section>
+
+        <aside class="sidebar">
+            <input type="text" placeholder="Search">
+            <button>Search</button>
+
+            <h3>Categories</h3>
+            <ul>
+                <li>Category 1</li>
+                <li>Category 2</li>
+                <li>Category 3</li>
+                <li>Category 4</li>
+            </ul>
+
+            <h3>Categories</h3>
+            <ul>
+                <li>Category 1</li>
+                <li>Category 2</li>
+                <li>Category 3</li>
+            </ul>
+        </aside>
+    </div>
+</main>
+
+<footer class="site-footer">
+    <p>© 2024 My Blog</p>
+</footer>
 
 </body>
 </html>

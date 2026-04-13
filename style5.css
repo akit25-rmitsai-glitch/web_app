@@ -1,0 +1,113 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f2f2f2;
+    color: #111;
+}
+
+.lab-page {
+    padding: 40px 20px;
+}
+
+.game-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #ffffff;
+    border: 1px solid #cfcfcf;
+    padding: 30px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.game-wrapper h2 {
+    margin-top: 0;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.info-panel {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.info-box {
+    min-width: 170px;
+    padding: 12px 16px;
+    border: 1px solid #bdbdbd;
+    background: #fafafa;
+    text-align: center;
+    font-weight: 700;
+}
+
+#message {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 16px;
+}
+
+#game {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.field {
+    border-collapse: separate;
+    border-spacing: 4px;
+}
+
+#game td {
+    width: 60px;
+    height: 60px;
+    border: 1px solid #555;
+    background: #ffffff;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    transition: background 0.2s ease, transform 0.2s ease;
+    font-weight: 700;
+}
+
+#game td:hover {
+    background: #f0f0f0;
+    transform: scale(1.03);
+}
+
+.active {
+    background-color: lightgreen !important;
+}
+
+.buttons {
+    text-align: center;
+}
+
+#restart-btn {
+    padding: 10px 18px;
+    border: 1px solid #555;
+    background: #efefef;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+#restart-btn:hover {
+    background: #e2e2e2;
+}
+
+@media (max-width: 768px) {
+    #game td {
+        width: 46px;
+        height: 46px;
+        font-size: 16px !important;
+    }
+
+    .game-wrapper {
+        padding: 20px 15px;
+    }
+
+    .info-box {
+        min-width: 140px;
+    }
+}

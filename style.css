@@ -1,68 +1,51 @@
-body {
-    font-family: Arial;
-    margin: 0;
-    background: #eee;
-}
+SQL для створення бази даних
 
-header {
-    text-align: center;
-    padding: 20px;
-    background: white;
-    border-bottom: 1px solid black;
-}
+CREATE DATABASE IF NOT EXISTS hotel_reservation
+CHARACTER SET utf8mb4
+COLLATE utf8mb4_unicode_ci;
 
-nav a {
-    margin: 10px;
-    text-decoration: none;
-    color: black;
-}
+USE hotel_reservation;
 
-main {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    padding: 30px;
-}
 
-.content {
-    width: 500px;
-}
 
-.post {
-    display: flex;
-    gap: 20px;
-    margin-bottom: 30px;
-}
+SQL для створення таблиць
 
-.img {
-    width: 80px;
-    height: 80px;
-    border: 1px solid black;
-}
+CREATE TABLE IF NOT EXISTS rooms (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    name TEXT,
+    capacity INT,
+    status VARCHAR(30)
+);
 
-aside {
-    border: 1px solid black;
-    padding: 20px;
-    width: 250px;
-    background: white;
-    flex-shrink: 0;
-}
+CREATE TABLE IF NOT EXISTS reservations (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    name TEXT,
+    start DATETIME,
+    end DATETIME,
+    room_id INT,
+    status VARCHAR(30),
+    paid INT,
+    FOREIGN KEY (room_id) REFERENCES rooms(id)
+);
 
-aside input {
-    width: 100%;
-    margin-bottom: 10px;
-    padding: 5px;
-}
 
-aside button {
-    width: 100%;
-    margin-bottom: 20px;
-    padding: 5px;
-}
 
-footer {
-    text-align: center;
-    padding: 20px;
-    border-top: 1px solid black;
-    margin-top: 40px;
-}
+Тестові дані для таблиці rooms
+
+INSERT INTO rooms (name, capacity, status) VALUES
+('Room 1', 2, 'dirty'),
+('Room 2', 2, 'cleanup'),
+('Room 3', 2, 'ready'),
+('Room 4', 4, 'ready'),
+('Room 5', 1, 'ready');
+
+
+
+Тестові дані для таблиці reservations
+
+INSERT INTO reservations (name, start, end, room_id, status, paid) VALUES
+('Mrs. Garcia', '2017-01-04 00:00:00', '2017-01-12 00:00:00', 1, 'arrived', 0),
+('Mr. Jones', '2017-01-01 00:00:00', '2017-01-06 00:00:00', 2, 'checkedout', 100),
+('Mr. Schwartz', '2017-01-06 00:00:00', '2017-01-12 00:00:00', 2, 'confirmed', 50),
+('Mr. Gray', '2017-01-03 00:00:00', '2017-01-11 00:00:00', 3, 'expired', 0),
+('Mrs. Nguyen', '2017-01-09 00:00:00', '2017-01-15 00:00:00', 4, 'new', 0);

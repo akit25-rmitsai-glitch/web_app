@@ -1,74 +1,105 @@
-header {
-    text-align: center;
-    padding: 20px;
-    background: white;
-    border-bottom: 1px solid black;
-}
-
-nav a {
-    margin: 10px;
-    text-decoration: none;
-    color: black;
-}
-
 body {
     margin: 0;
-    padding: 0;
-    background-image: url(images/cosmos.jpg);
-    background-size: cover;
+    font-family: Arial, sans-serif;
+    background: #eeeeee;
+    color: #111;
 }
 
-#earth {
-    position: relative;
-    padding: 100px;
-    z-index: 1;
+.page {
+    padding: 40px 0;
 }
 
-#moon {
-    position: absolute;
-    top: 250px;
-    left: 250px;
-    width: 110px;
-    z-index: 0;
-
-    animation: orbita 5s linear infinite;
+.layout {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
 }
 
-@keyframes orbita {
+.content {
+    width: 100%;
+    max-width: 560px;
+}
 
-    0% {
-        top: 250px;
-        left: 250px;
-        width: 110px;
-        z-index: 0;
+.content h2 {
+    margin: 0 0 25px;
+    font-size: 24px;
+}
+
+.post {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 28px;
+}
+
+.img {
+    width: 80px;
+    height: 80px;
+    border: 1px solid #9e9e9e;
+    background: #f8f8f8;
+    flex-shrink: 0;
+}
+
+.post-text h3 {
+    margin: 0 0 10px;
+    font-size: 20px;
+}
+
+.post-text p {
+    margin: 0;
+    line-height: 1.5;
+    color: #333;
+}
+
+.sidebar {
+    width: 100%;
+    max-width: 260px;
+    border: 1px solid #9e9e9e;
+    background: #f6f6f6;
+    padding: 15px;
+    flex-shrink: 0;
+}
+
+.sidebar input,
+.sidebar button {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #bdbdbd;
+    margin-bottom: 10px;
+    font: inherit;
+}
+
+.sidebar button {
+    cursor: pointer;
+    background: #e9e9e9;
+}
+
+.sidebar h3 {
+    margin: 20px 0 10px;
+    font-size: 18px;
+}
+
+.sidebar ul {
+    margin: 0;
+    padding-left: 18px;
+}
+
+.site-footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #bdbdbd;
+    background: #ffffff;
+    margin-top: 40px;
+}
+
+@media (max-width: 900px) {
+    .layout {
+        flex-direction: column;
     }
 
-    25% {
-        top: 150px;
-        left: 550px;
-        width: 125px;
-        z-index: 2;
-    }
-
-    50% {
-        top: 280px;
-        left: 280px;
-        width: 140px;
-        z-index: 2;
-    }
-
-    75% {
-        top: 500px;
-        left: 20px;
-        width: 125px;
-        z-index: 0;
-    }
-
-    100% {
-        top: 250px;
-        left: 250px;
-        width: 110px;
-        transform: rotate(360deg);
-        z-index: 0;
+    .content,
+    .sidebar {
+        max-width: 100%;
     }
 }

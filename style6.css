@@ -1,0 +1,95 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #efefef;
+    color: #111;
+}
+
+.lab-page {
+    padding: 40px 20px;
+}
+
+.game-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.game-wrapper h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 34px;
+}
+
+.status {
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+.board {
+    width: 420px;
+    margin: 0 auto 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 120px);
+    gap: 30px;
+    justify-content: center;
+}
+
+.cell {
+    width: 120px;
+    height: 120px;
+    background: #dcdcdc;
+    border: 2px solid #c8c8c8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #000;
+    font-size: 72px;
+    font-weight: 400;
+    box-sizing: border-box;
+}
+
+a.cell:hover {
+    background: #d3d3d3;
+}
+
+.restart-block {
+    margin-top: 10px;
+}
+
+.restart-link {
+    font-size: 64px;
+    color: #5a2ca0;
+    text-decoration: underline;
+}
+
+.restart-link:hover {
+    color: #4a2387;
+}
+
+@media (max-width: 768px) {
+    .board {
+        width: 300px;
+        grid-template-columns: repeat(3, 80px);
+        gap: 20px;
+    }
+
+    .cell {
+        width: 80px;
+        height: 80px;
+        font-size: 48px;
+    }
+
+    .restart-link {
+        font-size: 40px;
+    }
+
+    .status {
+        font-size: 20px;
+    }
+
+    .game-wrapper h2 {
+        font-size: 28px;
+    }
+}
