@@ -1,12 +1,20 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lab 3</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lab 3 Bootstrap</title>
 
-    <link rel="stylesheet" href="navbar.css">
+    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Animate.css (для анімацій) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <!-- Твій navbar -->
+    <link rel="stylesheet" href="navbar.css">
+
+    <!-- Твій стиль -->
     <link rel="stylesheet" href="style3.css">
 </head>
 <body>
@@ -27,51 +35,90 @@
     </div>
 </header>
 
-<section class="hero d-flex align-items-center text-center text-white">
+<main class="py-5">
     <div class="container">
-        <h2 class="display-4 animate">Адаптивний сайт</h2>
-        <p class="lead animate">Bootstrap + анімація</p>
-    </div>
-</section>
+        <div class="row">
 
-<section class="py-5">
-    <div class="container">
-        <div class="row g-4">
-            <div class="col-md-4">
-                <div class="card animate h-100">
-                    <img src="https://picsum.photos/300/200?1" class="card-img-top" alt="img">
-                    <div class="card-body">
-                        <h5 class="card-title">Card 1</h5>
-                        <p class="card-text">Приклад адаптивної картки на Bootstrap.</p>
+            <!-- Контент -->
+            <section class="col-lg-8">
+
+                <h2 class="mb-4 animate__animated animate__fadeInDown">Latest Posts</h2>
+
+                <!-- Post -->
+                <div class="card mb-4 animate__animated animate__fadeInUp">
+                    <div class="row g-0">
+                        <div class="col-md-3">
+                            <div class="img-placeholder"></div>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="card-body">
+                                <h5 class="card-title">Article Title</h5>
+                                <p class="card-text">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="col-md-4">
-                <div class="card animate h-100">
-                    <img src="https://picsum.photos/300/200?2" class="card-img-top" alt="img">
-                    <div class="card-body">
-                        <h5 class="card-title">Card 2</h5>
-                        <p class="card-text">Ще один приклад блоку зі сіткою Bootstrap.</p>
+                <!-- Post -->
+                <div class="card mb-4 animate__animated animate__fadeInUp animate__delay-1s">
+                    <div class="row g-0">
+                        <div class="col-md-3">
+                            <div class="img-placeholder"></div>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="card-body">
+                                <h5 class="card-title">Article Title</h5>
+                                <p class="card-text">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="col-md-4">
-                <div class="card animate h-100">
-                    <img src="https://picsum.photos/300/200?3" class="card-img-top" alt="img">
-                    <div class="card-body">
-                        <h5 class="card-title">Card 3</h5>
-                        <p class="card-text">Сторінка залишається простою і зрозумілою.</p>
-                    </div>
+                <!-- Відео -->
+                <div class="ratio ratio-16x9 mt-4 animate__animated animate__zoomIn">
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                            title="YouTube video"
+                            allowfullscreen>
+                    </iframe>
                 </div>
-            </div>
+
+            </section>
+
+            <!-- Sidebar -->
+            <aside class="col-lg-4 mt-4 mt-lg-0">
+
+                <div class="p-3 border bg-light animate__animated animate__fadeInRight">
+
+                    <input type="text" class="form-control mb-2" placeholder="Search">
+                    <button class="btn btn-secondary w-100 mb-3">Search</button>
+
+                    <h5>Categories</h5>
+                    <ul>
+                        <li>Category 1</li>
+                        <li>Category 2</li>
+                        <li>Category 3</li>
+                    </ul>
+
+                    <h5>More</h5>
+                    <ul>
+                        <li>Category A</li>
+                        <li>Category B</li>
+                    </ul>
+
+                </div>
+
+            </aside>
+
         </div>
     </div>
-</section>
+</main>
 
-<footer class="footer-dark text-white text-center p-3">
-    © 2026
+<footer class="text-center p-3 border-top bg-white">
+    <p>© 2024 My Blog</p>
 </footer>
 
 </body>

@@ -1,37 +1,27 @@
 body {
-    margin: 0;
-    padding: 0;
+    background: #eeeeee;
+    font-family: Arial, sans-serif;
 }
 
-.hero {
-    min-height: calc(100vh - 73px);
-    background: url("https://picsum.photos/1920/1080") center / cover no-repeat;
+/* Картинки */
+.img-placeholder {
+    width: 100%;
+    height: 100%;
+    min-height: 100px;
+    border: 1px solid #9e9e9e;
+    background: #f8f8f8;
 }
 
-.animate {
-    animation: fadeInUp 1.5s ease;
+/* Sidebar */
+aside ul {
+    padding-left: 18px;
 }
 
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
+/* Анімація при наведенні */
 .card {
-    transition: transform 0.3s ease;
+    transition: 0.3s;
 }
 
 .card:hover {
-    transform: scale(1.05);
-}
-
-.footer-dark {
-    background: #212529;
+    transform: scale(1.02);
 }
